@@ -1,2 +1,2 @@
-# jassiti-api
-Filmes que ja foi assistido
+# jassisti API
+Filmes que ja foram assistido
