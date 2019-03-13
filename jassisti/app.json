@@ -1,0 +1,7 @@
+{
+    "name": "Jassisti - API",
+    "description": "API que grava os filmes que ja foram assistidos",
+    "addons": [
+        "heroku-postgresql"
+    ]
+}
