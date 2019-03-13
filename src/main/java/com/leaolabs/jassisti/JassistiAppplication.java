@@ -11,9 +11,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class JassistiAppplication {
     
 
-    @RequestMapping("/health")
+    @RequestMapping("/")
     @ResponseBody
     String home() {
+        return "Bem vindo! (Welcome!)";
+    }
+
+    @RequestMapping("/health")
+    @ResponseBody
+    String health() {
         return "API IS OK!";
     }
 
