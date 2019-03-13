@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - JassistiAppplication",
+            "request": "launch",
+            "mainClass": "com.leaolabs.jassisti.JassistiAppplication",
+            "projectName": "jassisti"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DemoApplication",
+            "request": "launch",
+            "mainClass": "com.leaolabs.jassisti.DemoApplication",
+            "projectName": "jassisti"
+        }
+    ]
+}
