@@ -9,21 +9,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @SpringBootApplication
 public class JassistiAppplication {
-    
 
-    @RequestMapping("/")
-    @ResponseBody
-    String home() {
-        return "Bem vindo! (Welcome!)";
-    }
+	@RequestMapping("/")
+	@ResponseBody
+	String home() {
+		return "Bem vindo! (Welcome!)";
+	}
 
-    @RequestMapping("/health")
-    @ResponseBody
-    String health() {
-        return "API IS OK!";
-    }
+	@RequestMapping("/health")
+	@ResponseBody
+	String health() {
+		return "API IS OK!";
+	}
 
-    public static void main(String[] args) {
-        SpringApplication.run(JassistiAppplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(JassistiAppplication.class, args);
+	}
 }

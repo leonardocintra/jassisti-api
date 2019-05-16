@@ -1,1 +1,14 @@
-/home/leonardo/Github/jassisti-api/jassisti/src/main/java/com/leaolabs/jassisti/JassistiAppplication.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/v1/mapper/FilmeMapper.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/repository/FilmeRepository.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/JassistiAppplication.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/v1/dtos/FilmeDto.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/v1/controller/FilmeController.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/commons/controller/ResponseMeta.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/business/impl/FilmeBusinessImpl.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/commons/exception/EntityNotFoundException.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/commons/controller/OffsetLimitRequest.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/business/FilmeBusiness.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/commons/converter/CaseInsensitiveConverter.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/commons/exception/BaseControllerException.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/commons/controller/BaseController.java
+/home/leonardo/Github/jassisti-api/src/main/java/com/leaolabs/jassisti/model/Filme.java
