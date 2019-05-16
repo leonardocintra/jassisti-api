@@ -26,7 +26,7 @@ public class FilmeController extends BaseController {
 	private final FilmeBusiness filmeBusiness;
 	private final FilmeMapper filmeMapper;
 
-	@Autowired	
+	@Autowired
 	public FilmeController(final FilmeBusiness filmeBusiness, final FilmeMapper filmeMapper) {
 		super(Filme.class);
 		this.filmeBusiness = filmeBusiness;
@@ -36,7 +36,7 @@ public class FilmeController extends BaseController {
 	@ResponseBody
 	@PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<ResponseMeta> post(@RequestBody final FilmeDto filmeDto) {
-		var optionalFilme = this.filmeBusiness.create(this.filmeMapper.deserialize(filmeDto));
+		Optional<Filme> optionalFilme = this.filmeBusiness.create(this.filmeMapper.deserialize(filmeDto));
 
 		return super.buildResponse(HttpStatus.CREATED, Optional
 				.of(this.filmeMapper.serialize(optionalFilme.orElseThrow(() -> new EntityNotFoundException("Filme")))));

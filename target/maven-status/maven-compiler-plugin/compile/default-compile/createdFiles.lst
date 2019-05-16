@@ -1,0 +1,7 @@
+com/leaolabs/jassisti/model/Filme.class
+com/leaolabs/jassisti/v1/dtos/FilmeDto$FilmeDtoBuilder.class
+com/leaolabs/jassisti/v1/dtos/FilmeDto.class
+com/leaolabs/jassisti/JassistiAppplication.class
+com/leaolabs/jassisti/model/Filme$FilmeBuilder.class
+com/leaolabs/jassisti/v1/mapper/FilmeMapper.class
+com/leaolabs/jassisti/repository/FilmeRepository.class
