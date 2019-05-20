@@ -3,6 +3,7 @@ package com.leaolabs.jassisti.v1.controller;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,10 @@ import com.leaolabs.jassisti.v1.mapper.FilmeMapper;
 @RestController
 @RequestMapping("/v1/jassisti/filmes")
 public class FilmeController extends BaseController {
+	
+	@Value("${spring.datasource.url}")
+	private static String applicationVersion;
+	
 	private final FilmeBusiness filmeBusiness;
 	private final FilmeMapper filmeMapper;
 
@@ -38,6 +43,8 @@ public class FilmeController extends BaseController {
 	public ResponseEntity<ResponseMeta> post(@RequestBody final FilmeDto filmeDto) {
 		Optional<Filme> optionalFilme = this.filmeBusiness.create(this.filmeMapper.deserialize(filmeDto));
 
+		System.out.println(applicationVersion);
+		
 		return super.buildResponse(HttpStatus.CREATED, Optional
 				.of(this.filmeMapper.serialize(optionalFilme.orElseThrow(() -> new EntityNotFoundException("Filme")))));
 	}
