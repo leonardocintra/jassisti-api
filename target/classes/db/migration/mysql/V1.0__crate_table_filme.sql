@@ -1,4 +1,4 @@
-CREATE TABLE jassisti.filme (
+CREATE TABLE filme (
 	id bigint(20) NOT NULL AUTO_INCREMENT,
 	titulo varchar(100) NOT NULL,
 	the_movie_db_id INTEGER NULL,
