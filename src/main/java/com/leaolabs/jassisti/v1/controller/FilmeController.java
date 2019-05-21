@@ -1,5 +1,6 @@
 package com.leaolabs.jassisti.v1.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +38,14 @@ public class FilmeController extends BaseController {
 		super(Filme.class);
 		this.filmeBusiness = filmeBusiness;
 		this.filmeMapper = filmeMapper;
+	}
+	
+	@GetMapping(value = "")
+	@ResponseBody
+	public ResponseEntity<ResponseMeta> getAll(){
+		List<Filme> filmes = this.filmeBusiness.findAll();
+		
+		return super.buildResponse(HttpStatus.OK, Optional.of(this.filmeMapper.serialize(filmes)));
 	}
 
 	@ResponseBody
