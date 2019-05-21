@@ -49,7 +49,7 @@ public class FilmeController extends BaseController {
 	}
 
 	@ResponseBody
-	@PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<ResponseMeta> post(@RequestBody final FilmeDto filmeDto) {
 		Optional<Filme> optionalFilme = this.filmeBusiness.create(this.filmeMapper.deserialize(filmeDto));
 
