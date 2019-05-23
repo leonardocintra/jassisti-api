@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.leaolabs.jassisti.business.FilmeBusiness;
+import com.leaolabs.jassisti.commons.exception.EntityNotFoundException;
 import com.leaolabs.jassisti.model.Filme;
 import com.leaolabs.jassisti.repository.FilmeRepository;
 
@@ -21,12 +22,17 @@ public class FilmeBusinessImpl implements FilmeBusiness {
 	}
 
 	@Override
-	public Optional<Filme> create(Filme filme) {
-		return Optional.of(filmeRepository.save(filme));
+	public Optional<Filme> create(final Filme filme) {
+		return Optional.of(this.filmeRepository.save(filme));
 	}
 
 	@Override
 	public List<Filme> findAll() {
-		return filmeRepository.findAll();
+		return this.filmeRepository.findAll();
+	}
+
+	@Override
+	public Optional<Filme> findById(final Long id) {
+		return this.filmeRepository.findById(id);
 	}
 }

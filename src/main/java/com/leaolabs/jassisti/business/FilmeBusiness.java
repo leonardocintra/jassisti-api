@@ -9,6 +9,8 @@ public interface FilmeBusiness {
 
 	List<Filme> findAll();
 
-	Optional<Filme> create(Filme filme);
+	Optional<Filme> findById(Long id);
 
+	Optional<Filme> create(Filme filme);
+	
 }

@@ -17,7 +17,7 @@ public class FilmeMapper {
 			return new FilmeDto();
 		}
 
-		return FilmeDto.builder().titulo(filme.getTitulo()).movieTmdId(filme.getMovieTmdId())
+		return FilmeDto.builder().id(filme.getId()).titulo(filme.getTitulo()).movieTmdId(filme.getMovieTmdId())
 				.dataLancamento(filme.getDataLancamento()).sinopse(filme.getSinopse())
 				.imagemPoster(filme.getImagemPoster()).build();
 	}
@@ -32,7 +32,7 @@ public class FilmeMapper {
 			return new Filme();
 		}
 
-		return Filme.builder().titulo(filmeDto.getTitulo()).movieTmdId(filmeDto.getMovieTmdId())
+		return Filme.builder().id(filmeDto.getId()).titulo(filmeDto.getTitulo()).movieTmdId(filmeDto.getMovieTmdId())
 				.dataLancamento(filmeDto.getDataLancamento()).sinopse(filmeDto.getSinopse())
 				.imagemPoster(filmeDto.getImagemPoster()).build();
 	}

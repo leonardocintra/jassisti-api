@@ -24,6 +24,9 @@ import lombok.ToString;
 public class FilmeDto implements Serializable {
 
 	private static final long serialVersionUID = -1648130419885819386L;
+	
+	@NotBlank
+	private Long id;
 
 	@NotBlank
 	private String titulo;
