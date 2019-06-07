@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -28,9 +27,6 @@ import com.leaolabs.jassisti.v1.mapper.FilmeMapper;
 @RequestMapping("/v1/jassisti/filmes")
 public class FilmeController extends BaseController {
 
-	@Value("${spring.datasource.url}")
-	private static String applicationVersion;
-
 	private final FilmeBusiness filmeBusiness;
 	private final FilmeMapper filmeMapper;
 
@@ -49,7 +45,7 @@ public class FilmeController extends BaseController {
 		return super.buildResponse(HttpStatus.OK, Optional.of(this.filmeMapper.serialize(filmes)));
 	}
 
-	@GetMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/{id}")
 	@ResponseBody
 	public ResponseEntity<ResponseMeta> getById(@PathVariable final Long id) {
 		final Optional<Filme> filme = this.filmeBusiness.findById(id);
