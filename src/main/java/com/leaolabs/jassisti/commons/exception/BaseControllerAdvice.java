@@ -25,7 +25,6 @@ public class BaseControllerAdvice {
 	            format("{0} not found", ex.getParameters()))
 	        .userMessage(
 	            format("You attempted to get a {0}, but did not find any", ex.getParameters()))
-	        .errorCode(20023)
 	        .build());
 	  }
 

@@ -57,7 +57,6 @@ public class ResponseMeta implements Serializable {
 
 		private String developerMessage;
 		private String userMessage;
-		private int errorCode;
 		@Builder.Default
 		private String moreInfo = "Email to leonardo.ncintra@outlook.com";
 	}
